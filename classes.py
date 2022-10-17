@@ -76,14 +76,7 @@ class Train:
         with open('trains.json', 'w') as outfile:
             outfile.write(json_string)
 
-    # @staticmethod
-    # def read_json(json_file: str):
-    #     """Method reading json file"""
-    #     with open(json_file) as json_file:
-    #         data = json.load(json_file)
-    #         return data
-    # After the program - let’s print out all locomotives
-    # with sorted locomotives by their wagons' specific mass sum
+            
     @staticmethod
     def sort_locomotive_by_their_wagon_sum_mass(train_list: list['Train']):
         sorted_train_list = sorted(train_list, key=lambda train: train.calculate_wagon_weight())
